@@ -6,7 +6,8 @@ public class Door : MonoBehaviour
 {
     public GameObject effectPreafb;
     public Transform efectPosition;
-    public bool isOpen;
+    
+    private bool isOpen;
 
     private void Start()
     {
@@ -17,7 +18,8 @@ public class Door : MonoBehaviour
     {
         if (isOpen == false)
         {
-            GameObject effect = Instantiate(effectPreafb, efectPosition);
+            isOpen = true;
+            Instantiate(effectPreafb, efectPosition);
         }
     }
 }

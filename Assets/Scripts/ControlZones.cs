@@ -13,7 +13,6 @@ public class ControlZones : MonoBehaviour
         if (other.tag == "Door")
         {
             other.gameObject.GetComponent<Door>().StartEffect();
-            other.gameObject.GetComponent<Door>().isOpen = true;
         }
         
     }
