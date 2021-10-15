@@ -15,6 +15,10 @@ public class ControlZones : MonoBehaviour
             other.gameObject.GetComponent<Door>().StartEffect();
         }
         
+        if (other.tag == "Lightning")
+        {
+            other.gameObject.GetComponent<Trigger2>().StartEffect();
+        }
     }
 
 }
