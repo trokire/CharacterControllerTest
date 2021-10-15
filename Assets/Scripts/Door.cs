@@ -6,8 +6,9 @@ public class Door : MonoBehaviour
 {
     public GameObject effectPreafb;
     public Transform efectPosition;
+    public GameObject door2;
     
-    private bool isOpen;
+    public bool isOpen;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class Door : MonoBehaviour
 
     public void StartEffect()
     {
-        if (isOpen == false)
+        if (isOpen == false && door2.GetComponent<Door>().isOpen == false)
         {
             isOpen = true;
             Instantiate(effectPreafb, efectPosition);
